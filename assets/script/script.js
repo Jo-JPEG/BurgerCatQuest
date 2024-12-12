@@ -6,9 +6,14 @@ let wordList = {
     genius: ['quizzaciously', 'antidisestablishmentarianism', 'floccinaucinihilipilification', 'hippopotomonstrosesquipedaliophobia']
 };
 let attempts;
+let attemptsLeft = getElementById('attempts').value;
 let word;
 let guessedLetters = [];
 let wrongGuesses = [];
+
+attemptsLeft.addEventListener('input',balloonPop(attemptsLeft)){    
+}
+
 document.querySelectorAll('.difficulty-button').forEach(button => {
     button.addEventListener('click', () => {
         selectedLevel = button.dataset.level;
@@ -23,7 +28,7 @@ function setDifficulty(level) {
     } else {
         attempts = 10;
     }
-    document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
+    document.getElementById('attempts').textContent = `${attempts}`;
 }
 function startGame() {
     setDifficulty(selectedLevel);
@@ -82,3 +87,17 @@ function checkGameStatus() {
         alert('Game Over! You ran out of attempts!');
     }
 }
+
+function balloonsPop() {
+    if (attemptsLeft === 9) {
+        document.getElementById('cat').src="../images/balloonsGraphic9.png";
+    }
+    if (attemptsLeft === 8) {
+        document.getElementById('cat').src="../images/balloonsGraphic8.png";
+    }
+    else {
+        document.getElementById('cat').src="../images/balloonsGraphic1.png";
+    }
+}
+    
+balloonsPop();
