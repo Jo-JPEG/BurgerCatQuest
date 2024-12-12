@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let word;
     let guessedLetters = [];
     let wrongGuesses = [];
+    let balloons =10;
 
 
     //Event Listeners
@@ -114,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             wrongGuesses.push(letter);
             attempts--;
+            balloons--;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             displayWord();
@@ -134,7 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // adds cat and balloons picture 
 
     const cat = document.getElementById('cat');
-    cat.src = 'assets/images/balloonsGraphic10.png';    
-    
+    cat.src = `assets/images/balloonsGraphic${balloons}.png`;  
+
+
     
 });
