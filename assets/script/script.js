@@ -1,3 +1,4 @@
+
 javascript : let selectedLevel = 'easy'; // Default to 'easy'
 let wordList = {
     easy: ['cat', 'dog', 'bat', 'fish', 'ball'],
