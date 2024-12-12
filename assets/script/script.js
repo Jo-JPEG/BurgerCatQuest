@@ -1,5 +1,5 @@
 
-javascript : let selectedLevel = 'easy'; // Default to 'easy'
+let selectedLevel = 'easy'; // Default to 'easy'
 let wordList = {
     easy: ['cat', 'dog', 'bat', 'fish', 'ball'],
     intermediate: ['elephant', 'giraffe', 'mountain', 'computer', 'piano'],
@@ -17,21 +17,23 @@ document.querySelectorAll('.difficulty-button').forEach(button => {
 });
 function setDifficulty(level) {
     if (level === 'easy') {
-        attempts = 6;
+        attempts = 10;
     } else if (level === 'intermediate') {
-        attempts = 5;
+        attempts = 10;
     } else {
-        attempts = 4;
+        attempts = 10;
     }
     document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
 }
 function startGame() {
+    setDifficulty(selectedLevel);
     guessedLetters = [];
     wrongGuesses = [];
     word = getRandomWord(selectedLevel);
     displayWord();
     displayKeyboard();
     document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
+    resetButton.classList.remove('hidden');
 }
 function getRandomWord(level) {
     const words = wordList[level];

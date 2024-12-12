@@ -1,4 +1,4 @@
-HTML : <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@ HTML : <!DOCTYPE html>
 </head>
 <body>
     <div class="game-container">
-        <h1>Hangman Game</h1>
+        <h1>Burger Quest!</h1>
         <!-- Difficulty Selection Buttons -->
         <div id="difficulty-buttons">
             <button class="difficulty-button" data-level="easy">Easy</button>
@@ -17,12 +17,19 @@ HTML : <!DOCTYPE html>
         </div>
         <!-- Game Display -->
         <div class="word-display" id="word-display"></div>
-        <div class="attempts" id="attempts">Attempts: 6</div>
+        <div class="attempts" id="attempts"> Attempts: 10</div>
         <div class="wrong-guesses" id="wrong-guesses"></div>
         <div class="keyboard" id="keyboard"></div>
+
         <!-- Start Game Button -->
         <button id="start-button" class="start-button" onclick="startGame()">Start Game</button>
     </div>
+    <!-- image display  -->
+
+    <div id="balloons">
+        <img class="float" src="assets/images/balloonsGraphic10.png" alt="A cat holding balloons. You have ten guesses left.">
+    </div>
+
     <script src="assets/script/script.js"></script>
 </body>
 </html>
