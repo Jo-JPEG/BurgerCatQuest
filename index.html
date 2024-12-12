@@ -7,29 +7,31 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Burger Quest!</h1>
-        <!-- Difficulty Selection Buttons -->
-        <div id="difficulty-buttons">
-            <button class="difficulty-button" data-level="easy">Easy</button>
-            <button class="difficulty-button" data-level="intermediate">Intermediate</button>
-            <button class="difficulty-button" data-level="genius">Genius</button>
+    <body>
+        <div class="game-modal">
+            <div class="content">
+                <img src="#" alt="gif">
+                <h4>Game Over!</h4>
+                <p>The correct word was: <b>rainbow</b></p>
+                <button class="play-again">Play Again</button>
+            </div>
         </div>
-        <!-- Game Display -->
-        <div class="word-display" id="word-display"></div>
-        <div class="attempts"> Attempts: <span id="attempts">9</span></div>
-        <div class="wrong-guesses" id="wrong-guesses"></div>
-        <div class="keyboard" id="keyboard"></div>
-
-        <!-- Start Game Button -->
-        <button id="start-button" class="start-button" onclick="startGame()">Start Game</button>
-    </div>
-    <!-- image display  -->
-
+        <div class="container">
+            <div class="hangman-box">
+                <img src="#" draggable="false" alt="hangman-img">
+                <h1>Hangman Game</h1>
+            </div>
+            <div class="game-box">
+                <ul class="word-display"></ul>
+                <h4 class="hint-text">Hint: <b></b></h4>
+                <h4 class="guesses-text">Incorrect guesses: <b></b></h4>
+                <div class="keyboard"></div>
+            </div>
+        </div>
+    </body>
     <div id="balloons" class="float">
-        <img id="cat" src="assets/images/balloonsGraphic10.png" alt="A cat holding balloons. You have ten guesses left.">
+        <img id="cat" src="assets/images/balloonsGraphic10.png" alt="10">
     </div>
-
     <script src="assets/script/script.js"></script>
 </body>
 </html>
