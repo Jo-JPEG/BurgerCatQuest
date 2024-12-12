@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let guessedLetters = [];
     let wrongGuesses = [];
 
+    attemptsLeft.addEventListener('input',balloonPop(attemptsLeft)){
+        
+    }
+
 
     //Event Listeners
     resetButton.addEventListener('click', startGame);
