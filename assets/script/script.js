@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let word;
     let guessedLetters = [];
     let wrongGuesses = [];
-    let balloons =10;
+  
 
 
     //Event Listeners
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function setDifficulty(level) {
         if (level === 'easy') {
-            attempts = 6;
+            attempts = 10;
         } else if (level === 'intermediate') {
-            attempts = 5;
+            attempts = 10;
         } else {
-            attempts = 4;
+            attempts = 10;
         }
         document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
     }
@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             wrongGuesses.push(letter);
             attempts--;
-            balloons--;
             document.getElementById('attempts').textContent = `Attempts: ${attempts}`;
             document.getElementById('wrong-guesses').textContent = `Wrong guesses: ${wrongGuesses.join(', ')}`;
             displayWord();
@@ -133,10 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+
+    let balloons = 10;
+
     // adds cat and balloons picture 
 
     const cat = document.getElementById('cat');
-    cat.src = `assets/images/balloonsGraphic${balloons}.png`;  
+    cat.src = `assets/images/balloonsGraphic${balloons}.png`;
+    cat.alt = `you have ${balloons} balloons`;
 
 
     
