@@ -133,11 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // adds cat and balloons picture 
 
-    const image = document.getElementById('cat');
-
-    if (attempts === 6) {
-        image.src = 'assets/images/balloonsGraphic6.png';
-    } else
-    {image.src = 'assets/images/balloonsGraphic10.png';}
-
+    const cat = document.getElementById('cat');
+    cat.src = 'assets/images/balloonsGraphic10.png';    
+    
+    
 });
